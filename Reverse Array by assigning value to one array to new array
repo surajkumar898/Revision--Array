@@ -1,0 +1,23 @@
+class main {
+    public static int[] reverse(int [] a){
+        int [] b = new int[a.length];
+        int j=0;
+        int i;
+        for(i=a.length-1; i>= 0; i--){
+            b[j]=a[i];
+            j++;
+        }
+        return b;
+        }
+    
+    public static void main(String [] args){
+        int [] a={8,4,6,5,9,2};
+        int [] result= reverse(a);
+        System.out.print("Reverse array: ");
+        for(int i=0; i<result.length; i++){
+            System.out.print(result[i] + " ");
+        }
+    }
+}
+The first thing I want to do is create an array and give input values to it, followed by creating a second array, b, and assigning a pointer that starts at index 0. Then, using a for loop, the index i starts at the last element of the array and ends at the first element, decrementing with each iteration
+During each iteration, the value at index i of the first array is assigned to index j of the second array, b, effectively reversing the array.” ✅
