@@ -1,0 +1,29 @@
+
+import java.util.Arrays;
+class main{
+    public static String palindrome(String a){
+           int [] s= {2,6,4,8,7};
+        int [] b= new int[s.length];
+        int j=0;
+        int i;
+        for(i=s.length-1; i>=0; i--){
+            b[j]=s[i];
+            j++;
+        }
+            if(Arrays.equals(s,b)){
+                return a;
+            }
+            else{
+            return "not palindrome";
+        }
+        }
+
+        public static void main(String[] args){
+          String a= "palindrome";
+            String result= palindrome(a);
+            System.out.println(result);
+        }
+    }
+First  i take one input array and create one array assigninga pointer for that empt array my index i is starts at last element of array then for eachb iteration it will be decrementing i using the pointer for 
+updating the values in the new array. and i assigning the each  index value of my input array to each index value of new array and then i  check  the value of the input array is equal to the new array if is condition true it 
+the palindrome or else it print not palindrome 
