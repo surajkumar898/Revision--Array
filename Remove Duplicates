@@ -1,0 +1,22 @@
+import java.util.Arrays;
+class Main{
+    public static int[] duplicates(int [] a){
+        int n= a.length;
+        int i; int j;
+        for(i=0; i<n; i++){
+        for(j=i+1; j<n; j++){
+            if(a[i]==a[j]){
+                a[j]=a[n-1];
+                n--;
+                j--;
+            }
+        }
+        }
+        return Arrays.copyOf(a,n);
+    }
+        public static void main(String [] args){
+            int [] a= {1,2,1,2,1};
+            int [] result = duplicates(a);
+            System.out.println(Arrays.toString(result));
+        }
+    }
