@@ -1,22 +1,23 @@
 import java.util.Arrays;
-class Main{
-    public static int[] duplicates(int [] a){
-    int [] b = new int[a.length];
-    int i;
-    int j=0;
-    for(i=0; i<a.length-1; i++){
-        if(a[i]!= a[i+1]){
-            b[j]=a[i];
-            j++;
+class main{
+    public static int [] duplicates(int [] a){
+        int n= a.length;
+        int i; int j;
+        for(i=0; i<n; i++){
+            for(j=i+1; j<n; j++){
+                if(a[i]==a[j]){
+                    a[j]= a[n-1];
+                    n--;
+                    j--;
+                }
+                }
+                }
+              return Arrays.copyOf(a, n); 
+    } 
+        public static void main(String [] args){
+            int [] a={2, 6, 2, 4, 5, 7, 5, 6};
+            int [] result= duplicates(a);
+            System.out.println(Arrays.toString(result));
         }
     }
-       b[j] = a[a.length - 1];
-        j++;
-        return Arrays.copyOf(b,j);
-    }
-    public static void main(String [] args){
-        int [] a= {1,1,2,2,3};
-        int [] result= duplicates(a);
-        System.out.println(Arrays.toString(result));
-    }
-}
+ first i take an input then in outer loop i start my index at firest elements of array followed by using inner loop I starts my index at  last next to the first elements of array. if my first elements is equal to the second elements then removing the second element by shifting the last elements to place of my index value  im checking  my first index with all the remaining elements. by the time of removing elements   i decrease the size of array and decrementing my second  index 
